@@ -2,23 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Walker : Creature
+public class Walker : Creature // INHERITANCE
 {
-    protected Walker(string nickname, int health, int speed, int strength) 
+    public Walker(string nickname, int strength) 
     {
     this.nickname = nickname;
-    this.health = health;
-    this.speed = speed;
     this.strength = strength;
+    Debug.Log("Walker created");
     }
 
-    protected override void Fight() 
+    protected override void Locomotion() // POLYMORPHISM
     {
-        Debug.Log("Fight!");
-    }
-
-    protected override void Locomotion()
-    {
-        Debug.Log("Move on Ground!");
+        Debug.Log("I move on ground!");
     }
 }
