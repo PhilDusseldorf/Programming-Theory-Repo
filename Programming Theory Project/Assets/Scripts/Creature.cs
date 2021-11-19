@@ -2,13 +2,12 @@ using UnityEngine;
 
 public abstract class Creature : MonoBehaviour
 {
-    public string nickname;
-    protected int strength;
+    protected string nickname;
 
-    protected abstract void Locomotion(); // ABSTRACTION
+    public abstract string MakeNoise(); // ABSTRACTION
 
-    protected virtual void Fight() {
-        Debug.Log("I can fight!");
+    protected virtual void Eat() {
+        Debug.Log("I eat everything!");
     }
 
     
